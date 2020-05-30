@@ -1,0 +1,13 @@
+<h2>Here's All the Companies</h2>
+{{#each data}}
+<div class="card">
+<div class="card-header">
+<div class="card-body">
+    <h5 class="card-title">Company Name: {{this.name}}</h5>
+    <form action="/compdash/{{this._id}}" method="GET">
+    <button type="submit" class="btn btn-success">View Details</button>
+    </form>
+</div>
+</div>
+</div>
+{{/each}}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Employee Dir</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"></head>
+<style type="text/css">
+	body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+.form-control {
+		font-size: 16px;
+		transition: all 0.4s;
+		box-shadow: none;
+	}
+	.form-control:focus {
+        border-color: #5cb85c;
+    }
+    .form-control, .btn {
+        border-radius: 50px;
+		outline: none !important;
+    }
+	.signup-form {
+		width: 480px;
+    	margin: 0 auto;
+		padding: 30px 0;
+	}
+    .signup-form form {
+		border-radius: 5px;
+    	margin-bottom: 20px;
+        background: #fff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+    }
+	  
+	.signup-form h2 {
+		text-align: center;
+		font-size: 34px;
+		margin: 10px 0 15px;
+	}
+	
+	.signup-form .form-group {
+		margin-bottom: 20px;
+	}
+	.signup-btn {
+		text-align: center;
+		border-color: #5cb85c;
+		transition: all 0.4s;
+	}
+	.signup-btn:hover {
+		background: #5cb85c;
+		opacity: 0.8;
+	}
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("https://en.bitcoinwiki.org/upload/en/images/thumb/6/62/BiteMyCoin-Cryptocurrency.png/500px-BiteMyCoin-Cryptocurrency.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("./img/bg-masthead.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.form-signin .checkbox{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+  .center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%) 
+}
+.header{
+  {{!-- position: fixed; --}}
+  width: 100%;
+  display: block;
+  {{!-- display: inline-block; --}}
+}
+.header1{
+  {{!-- padding-top: 2%; --}}
+  {{!-- position: fixed; --}}
+  width: 100%;
+  {{!-- display: inline-block; --}}
+}
+.custom-card{
+    border: 1px solid;
+    width: 16rem;
+    height: 23rem;
+    margin: 2%;
+    text-align: center;
+    text-shadow: white;
+    display: inline-block;
+}
+ div.scroll { 
+    margin:4px, 4px; 
+    padding:4px; 
+    width: 300px; 
+    height: 310px; 
+    overflow-x: hidden; 
+    overflow-x: auto; 
+    text-align:justify; 
+    border: 1px solid gray;
+    display: inline-block;
+    position: absolute;
+    } 
+    #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #5e4f50; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+</style>
+<body>
+  {{>header userCustomId=userId}}
+  <div class="container" style="margin-top: 3%;">
+  {{{ body }}}
+  </div>
+
+</body>
+
+</html>

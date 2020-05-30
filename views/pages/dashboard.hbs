@@ -1,0 +1,29 @@
+<div>
+    {{#if free}}
+    <a href="/newcompany" class="btn btn-info" style="text-align: right;">Create your own company</a>
+    {{else}}
+    <div class="card">
+    <div class="card-header">
+    Current Company
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">Company Name: {{name}}</h5>
+    <p class="card-text">Role:{{role}}</p>
+    <p class="card-text">Period:{{joiningdate}} -- Present</p>
+    <form action="/compdash/{{id}}" method="GET">
+    <button type="submit" class="btn btn-success">View Company Details</button>
+    </form>
+    <br>
+    <form action="/resign/{{id}}?_method=delete" method="POST">
+    <button type="submit" class="btn btn-danger">Resign</button>
+    </form>
+  </div>
+</div>
+    {{/if}}
+    <br>
+    <br>
+    <br>
+        <a href="/history" class="btn btn-info" style="text-align: right;">See your Employment History</a>
+    <a href="/allcomp" class="btn btn-info" style="text-align: right;">See All Companies</a>
+
+</div>

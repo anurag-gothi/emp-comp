@@ -1,0 +1,19 @@
+{{#if userCustomId}}
+    <nav style="background-color: #485461;
+background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);"class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a style="color: white;" class="navbar-brand" href="/home">Emploo By Anurag</a>
+        <form method='POST' action='/logout?_method=DELETE'>
+        <input type="submit" value="Logout">
+      </form>
+      </div>
+    {{else}}
+  
+   <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Emploo By Anurag</a>
+        <a href="/login" class="btn btn-primary">Sign In</a>
+        <a href="/register" id='signin_btn' class="btn btn-primary">Sign Up</a>
+      </div>
+  {{/if}}
+</nav>
